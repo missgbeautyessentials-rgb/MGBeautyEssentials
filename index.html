@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Business | Professional & Trusted</title>
+  <meta name="description" content="A clean, modern website for your business.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#home">BEAUTY & ESSENTIALS</a>
+      <button class="menu-btn" aria-label="Open menu">☰</button>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Products</a>
+        <a href="#gallery">Merchs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <img src="images/home.jpg" alt="Beauty & Essentials Hero Image" class="hero-bg-image" onerror="this.style.display='none'">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">ABOUT US</p>
+          <h2>Built around your customers.</h2>
+          <p>Replace this text with your business story, experience, values, and what makes your business different. Keep it personal and easy to read.</p>
+          <p>Use this section to build trust and explain the quality, care, or expertise behind your products and services.</p>
+        </div>
+        <div class="image-card">
+          <img src="images/about.jpg" alt="About our business" onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
+          <span>images/about.jpg</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section light">
+      <div class="container">
+        <div class="center">
+          <p class="eyebrow">WHAT WE OFFER</p>
+          <h2>Our Products</h2>
+          <p>Beauty Soap, False nails, Perfume.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-image">
+              <img src="images/service-1.jpg" alt="Service 1" onerror="this.style.display='none'">
+              <span>PHOTO</span>
+            </div>
+            <h3>Turmeric Kojic Soap</h3>
+            <p>Whitening & Cleansing Brightening Vitamin Kojic Acid Turmeric Soap Bar.</p>
+          </article>
+          <article class="card">
+            <div class="card-image">
+              <img src="images/service-2.jpg" alt="Service 2" onerror="this.style.display='none'">
+              <span>PHOTO</span>
+            </div>
+            <h3>False Nails</h3>
+            <p>Short Square Clear Glossy Cat Eye Shape False Nails Set.</p>
+          </article>
+          <article class="card">
+            <div class="card-image">
+              <img src="images/service-3.jpg" alt="Service 3" onerror="this.style.display='none'">
+              <span>PHOTO</span>
+            </div>
+            <h3>Product Three</h3>
+            <p>Short description of your service and the value it provides.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="center">
+          <p class="eyebrow">OUR Merchs</p>
+          <h2>Gallery</h2>
+          <p>Coming Soon.</p>
+        </div>
+        <div class="gallery">
+          <div>
+            <img src="images/gallery-1.jpg" alt="Gallery photo 1" onerror="this.style.display='none'">
+            <span>ADD PHOTO</span>
+          </div>
+          <div>
+            <img src="images/gallery-2.jpg" alt="Gallery photo 2" onerror="this.style.display='none'">
+            <span>ADD PHOTO</span>
+          </div>
+          <div>
+            <img src="images/gallery-3.jpg" alt="Gallery photo 3" onerror="this.style.display='none'">
+            <span>ADD PHOTO</span>
+          </div>
+          <div>
+            <img src="images/gallery-4.jpg" alt="Gallery photo 4" onerror="this.style.display='none'">
+            <span>ADD PHOTO</span>
+          </div>
+          <div>
+            <img src="images/gallery-5.jpg" alt="Gallery photo 5" onerror="this.style.display='none'">
+            <span>ADD PHOTO</span>
+          </div>
+          <div>
+            <img src="images/gallery-6.jpg" alt="Gallery photo 6" onerror="this.style.display='none'">
+            <span>ADD PHOTO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container center">
+        <p class="eyebrow">LET'S WORK TOGETHER</p>
+        <h2>Ready to get started?</h2>
+        <p>Replace this with your call to action.</p>
+        <a class="btn primary" href="#contact">Get in Touch</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section light">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow">CONTACT</p>
+          <h2>We'd love to hear from you.</h2>
+          <p>Message us.</p>
+          <div class="contact-details">
+            <p><strong>Email:</strong> missg.beauty.essentials@gmail.com</p>
+            <p><strong>Location:</strong> Olongapo City, Philippines</p>
+            <p><strong>Facebook:</strong> 
+              <a href="https://www.facebook.com/queen88grace" target="_blank">https://www.facebook.com/queen88grace</a></p>
+            <p><strong>Instagram:</strong> 
+              <a href="https://www.instagram.com/mrazgrace72/?hl=en" target="_blank">https://www.instagram.com/mrazgrace72/?hl=en</a></p>
+          </div>
+        </div>
+        <form action="https://formsubmit.co/ajax/missg.beauty.essentials@gmail.com"
+              method="POST"
+              id="contactForm">
+          <input type="hidden" name="_subject" value="New message from Miss G Beauty & Essentials website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+          <input type="email" name="email" placeholder="Email address" autocomplete="email" required>
+          <input type="text" name="subject" placeholder="Subject">
+          <textarea name="message" rows="6" placeholder="Your message" required></textarea>
+
+          <button class="btn primary" type="submit" id="submitButton">Send Message</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer">
+      <span>© 2026 Miss G. All rights reserved.</span>
+      <span>Miss G Beauty & Essentials.</span>
+    </div>
+  </footer>
+
+
+  <script>
+    const contactForm = document.getElementById("contactForm");
+    const submitButton = document.getElementById("submitButton");
+    const formStatus = document.getElementById("formStatus");
+
+    contactForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+      formStatus.textContent = "";
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success !== false) {
+          formStatus.textContent = "Thank you! Your message has been sent.";
+          contactForm.reset();
+        } else {
+          throw new Error(result.message || "Unable to send your message.");
+        }
+      } catch (error) {
+        formStatus.textContent =
+          "Sorry, your message could not be sent. Please email us directly at missg.beauty.essentials@gmail.com.";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Message";
+      }
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

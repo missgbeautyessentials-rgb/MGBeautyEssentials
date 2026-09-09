@@ -1,0 +1,464 @@
+/* Base Reset & Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #d67a99;
+  --primary-dark: #b85b7b;
+  --text-dark: #4a3b40;
+  --text-light: #7a6b70;
+  --light-pink: #fff5f7;
+  --light-gray: #f4f4f5;
+  --blush-pink: #ffdeeb;
+  --pastel-pink: #ffccd5;
+  --baby-pink: #ffe5ec;
+  --white: #ffffff;
+  --border-color: #f0d8df;
+  --transition: all 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+body {
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Global Auto-Fit Image Rule */
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Container & Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+/* Strictly Alternating Sections (Light Pink & Light Gray) */
+.section:nth-of-type(odd) {
+  background-color: var(--light-pink);
+}
+
+.section:nth-of-type(even) {
+  background-color: var(--light-gray);
+}
+
+/* Overriding the CTA section to also follow the alternating pattern */
+.cta {
+  background-color: var(--light-gray);
+  color: var(--text-dark);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.cta h2 {
+  color: var(--text-dark);
+}
+
+.cta p {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.center {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.btn.primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn.primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn.secondary:hover {
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+/* Header & Navigation */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 229, 236, 0.95);
+  box-shadow: 0 2px 10px rgba(214, 122, 153, 0.08);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text-dark);
+  letter-spacing: 1px;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.nav nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.nav nav a:hover {
+  color: var(--primary);
+}
+
+/* Home / Hero Section Styles for index.html[cite: 1] */
+#home.hero {
+  position: relative;
+  height: 80vh;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 10%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+}}
+
+.hero-text {
+  font-size: 1.15rem;
+  color: #fdfafb;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* About Section */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.image-card {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-card img {
+  position: relative;
+  z-index: 2;
+}
+
+.image-card span {
+  position: absolute;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.image-card.placeholder {
+  border: 2px dashed var(--primary);
+}
+
+/* Services Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 80px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(214, 122, 153, 0.08);
+  transition: var(--transition);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(214, 122, 153, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 250px;
+  background-color: var(--light-pink);
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  position: relative;
+  z-index: 2;
+}
+
+.card-image span {
+  position: absolute;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+
+/* Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery div {
+  position: relative;
+  height: 250px;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery img {
+  position: relative;
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.gallery div:hover img {
+  transform: scale(1.05);
+}
+
+.gallery span {
+  position: absolute;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/* Contact Section */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contact-details {
+  margin-top: 2rem;
+}
+
+.contact-details p {
+  margin-bottom: 0.75rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: var(--white);
+  transition: var(--transition);
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(214, 122, 153, 0.15);
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  align-self: flex-start;
+}
+
+/* Footer */
+footer {
+  background-color: var(--pastel-pink);
+  color: var(--text-dark);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .split,
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav nav {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
