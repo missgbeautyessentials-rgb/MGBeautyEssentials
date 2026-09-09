@@ -189,7 +189,7 @@ p {
   color: var(--primary);
 }
 
-/* Home / Hero Section Styles for index.html[cite: 1] */
+/* Home / Hero Section Styles */
 #home.hero {
   position: relative;
   height: 80vh;
@@ -215,8 +215,8 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 10%;
-  height: 10%;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
@@ -226,7 +226,7 @@ p {
   z-index: 3;
   color: #fff;
   text-align: center;
-}}
+}
 
 .hero-text {
   font-size: 1.15rem;
@@ -280,13 +280,13 @@ p {
 /* Services Cards Section */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
 .card {
   background: var(--white);
-  border-radius: 80px;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(214, 122, 153, 0.08);
   transition: var(--transition);
@@ -335,7 +335,7 @@ p {
 /* Gallery Section */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
@@ -381,6 +381,7 @@ p {
 
 .contact-details p {
   margin-bottom: 0.75rem;
+  word-break: break-word;
 }
 
 form {
@@ -430,30 +431,52 @@ footer {
   align-items: center;
 }
 
-/* Responsive Styles */
+/* Responsive Media Queries */
 @media (max-width: 900px) {
   .split,
   .contact {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-
-  .hero-content h1 {
-    font-size: 2.75rem;
-  }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
   .menu-btn {
     display: block;
   }
 
   .nav nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--baby-pink);
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    gap: 1.25rem;
+    box-shadow: 0 10px 15px rgba(214, 122, 153, 0.1);
   }
 
-  .hero-content h1 {
-    font-size: 2.25rem;
+  .nav nav.active {
+    display: flex;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+  }
+
+  .image-card {
+    height: 350px;
   }
 
   .footer {
