@@ -503,7 +503,7 @@ img {
   height: 100%;
   object-fit: cover;
   /* Adjust brightness, contrast, and saturation slightly for a natural, professional look */
-  filter: contrast(1.02) saturate(1.05) brightness(1.01);
+  filter: contrast(1.02) saturate(1.05) brightness(1.50);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
